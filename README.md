@@ -1,9 +1,7 @@
-# The Binding of Isaac Pedestal Detector
+# The Binding of Isaac Utilities
 
-This repository provides a simple Python script to capture the game screen and
-search for an item pedestal in *The Binding of Isaac*. It uses
-[PyAutoGUI](https://pyautogui.readthedocs.io/) for screen capture and
-[OpenCV](https://opencv.org/) for template matching.
+This repository contains resources and a Python tool to detect item pedestals in *The Binding of Isaac*.
+It also ships with JSON files describing game items and trinkets.
 
 ## Requirements
 
@@ -21,20 +19,18 @@ pip install opencv-python pyautogui mss pillow
 
 ## Usage
 
-1. Capture a screenshot of the item pedestal you want to detect and save it as an
-   image file (e.g. `pedestal.png`).
+1. Capture a screenshot of the item pedestal you want to detect and save it as an image file (e.g. `images/pedestal.png`).
 2. Run the detector and provide the template path:
 
 ```bash
-python pedestal_detector.py pedestal.png
+python src/pedestal_detector.py images/pedestal.png
 ```
 
 Optional arguments:
 
 - `--region X Y W H` — screen region to capture (defaults to full screen).
-- `--delay SECONDS` — seconds to wait before the screenshot is taken (defaults
-  to `2`).
+- `--delay SECONDS` — seconds to wait before the screenshot is taken (defaults to `2`).
 
-During the delay you can switch focus to the game window. The script will report
-whether it found the pedestal in the captured image and the coordinates of the
-match.
+During the delay you can switch focus to the game window. The script will report whether it found the pedestal in the captured image and the coordinates of the match.
+
+The `data/` directory holds JSON files with item and trinket descriptions that can be consumed by other tools.
