@@ -30,6 +30,11 @@ Optional arguments:
 
 - `--region X Y W H` — screen region to capture (defaults to full screen).
 - `--delay SECONDS` — seconds to wait before the screenshot is taken (defaults to `2`).
+- `--scale-min`, `--scale-max`, `--scale-step` — enable multi-scale search by
+  specifying the range of scales to try. By default the template is resized, but
+  you can use `--scale-target screenshot` to resize the captured image instead.
+  A wider range or smaller step improves detection of differently sized sprites
+  at the cost of additional processing time.
 
 During the delay you can switch focus to the game window. The script will report whether it found the pedestal in the captured image and the coordinates of the match.
 
