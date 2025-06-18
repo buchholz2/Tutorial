@@ -17,11 +17,12 @@ def capture_region(region=None):
     ----------
     region : tuple[int, int, int, int] or None
         Coordinates ``(x, y, width, height)`` of the region to capture. If
-        ``None``, the primary monitor is captured.
+        ``None``, the primary monitor is captured.  ``sct.monitors[0]`` would
+        instead grab the entire virtual screen spanning all monitors.
     """
     with mss() as sct:
         monitor = (
-            sct.monitors[0]
+            sct.monitors[1]  # index 0 represents all monitors together
             if region is None
             else {"left": region[0], "top": region[1], "width": region[2], "height": region[3]}
         )
