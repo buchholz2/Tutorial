@@ -36,3 +36,7 @@ Optional arguments:
 During the delay you can switch focus to the game window. The script will report whether it found the pedestal in the captured image and the coordinates of the match.
 
 The `data/` directory holds JSON files with item and trinket descriptions that can be consumed by other tools.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
