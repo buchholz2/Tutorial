@@ -10,11 +10,12 @@ It also ships with JSON files describing game items and trinkets.
 - `opencv-python`
 - `mss`
 - `Pillow`
+- `pygetwindow` (optional, for capturing a specific window)
 
 Install the dependencies with:
 
 ```bash
-pip install opencv-python pyautogui mss pillow
+pip install opencv-python pyautogui mss pillow pygetwindow
 ```
 
 ## Usage
@@ -30,6 +31,7 @@ Optional arguments:
 
 - `--region X Y W H` — screen region to capture (defaults to full screen).
 - `--delay SECONDS` — seconds to wait before the screenshot is taken (defaults to `2`).
+- `--window-title TITLE` — title of the game window to capture if no region is given (defaults to `"The Binding of Isaac"`).
 
 During the delay you can switch focus to the game window. The script will report whether it found the pedestal in the captured image and the coordinates of the match.
 
